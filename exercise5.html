@@ -1,56 +1,56 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>yma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid</title>
   <style>
-    .box1 {
-      width: 100px;
-      height: 100px;
-      background-color: red;
+    .box {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 5px;
     }
 
-    .box2 {
-      width: 100px;
-      height: 100px;
-      background-color: blue;
+    .box div {
+      height: 150px;
+      width: 150px;
+      background-color: rgb(255, 30, 0);
+      gap: 5px;
     }
 
-    .box3 {
-      width: 100px;
-      height: 100px;
-      background-color: blue;
-    }
-
-    .box4 {
-      width: 100px;
-      height: 100px;
-      background-color: blue;
-    }
-    
-    .box5 {
-      width: 100px;
-      height: 100px;
-      background-color: blue;
-    }
-    .box6 {
-      width: 100px;
-      height: 100px;
-      background-color: blue;
-    }
-
-    @media screen and (max-width: 900px) {
-      .box1 {
-        background-color: blue;
+   
+    @media only screen and (max-width: 900px) {
+      .box {
+        grid-template-columns: repeat(3, 1fr);
       }
-      .box2 {
-        background-color: red;
+    }
+
+   
+    @media only screen and (max-width: 600px) {
+      .box {
+        grid-template-columns: repeat(2, 1fr);
       }
+    }
+    @media only screen and (max-width: 600px) {
+      .box {
+        grid-template-columns: repeat(2, 1fr)
+      }
+   
+  
     }
   </style>
 </head>
+
 <body>
-  <div class="box1"></div>
-  <div class="box2"></div>
+  <div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </body>
+
 </html>
